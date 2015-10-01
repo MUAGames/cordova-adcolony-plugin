@@ -47,7 +47,7 @@
         if (options && [options isKindOfClass:[NSDictionary class]]) {
 //             [AdColony setOptions:options];
             [AdColony setCustomID:[options objectForKey:@"customId"]];
-            debug = [self toBool:[options objectForKey:@"debug"]];
+            /* debug = [self toBool:[options objectForKey:@"debug"]]; */
         }
         [AdColony configureWithAppID:appId zoneIDs:zoneIds delegate:self logging:debug];
 
