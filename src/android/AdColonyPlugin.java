@@ -25,7 +25,7 @@ package com.affinity.cordova.adcolony;
 
 import com.jirbo.adcolony.*;
 import org.apache.cordova.CallbackContext;
-import org.apache.cordova.LinearLayoutSoftKeyboardDetect;
+// import org.apache.cordova.LinearLayoutSoftKeyboardDetect;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.apache.cordova.PluginResult.Status;
