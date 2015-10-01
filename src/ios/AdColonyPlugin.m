@@ -249,7 +249,12 @@
             @"zoneId": zoneId
         }];
     } else {
-        NSLog(@"AdColony V4VCReward not successful with amound %d for zone %@", amount, zoneId);
+        NSLog(@"AdColony V4VCReward not successful with amount %d for zone %@", amount, zoneId);
+        [self fireEvent:@"v4vcfailed" data:@{
+            @"currencyName": currencyName,
+            @"amount": @(amount),
+            @"zoneId": zoneId
+        }];
     }
 }
 
@@ -280,6 +285,7 @@
     } else {
         [self sendPluginErrorToCallbackId:self.videoAdCallbackId message:@"Video ad not shown"];
         self.videoAdCallbackId = nil;
+        [self fireEvent:@"adfailed" data:@{@"zoneId": zoneId}];
     }
 }
 
