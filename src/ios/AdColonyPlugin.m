@@ -83,7 +83,7 @@
     } else {
         NSString *zoneId = [command.arguments objectAtIndex:0];
         // TODO: Make pre/post popups optional
-        [AdColony playVideoAdForZone:zoneId withDelegate:self withV4VCPrePopup:YES andV4VCPostPopup:YES];
+        [AdColony playVideoAdForZone:zoneId withDelegate:self withV4VCPrePopup:NO andV4VCPostPopup:NO];
         self.videoAdCallbackId = command.callbackId;
     }
 }
